@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/MarcoPereira27/nft-clicker-game/static/css/main.e8360e63.chunk.css",
-    "main.js": "/MarcoPereira27/nft-clicker-game/static/js/main.cc689376.chunk.js",
-    "main.js.map": "/MarcoPereira27/nft-clicker-game/static/js/main.cc689376.chunk.js.map",
-    "runtime-main.js": "/MarcoPereira27/nft-clicker-game/static/js/runtime-main.27f8f607.js",
-    "runtime-main.js.map": "/MarcoPereira27/nft-clicker-game/static/js/runtime-main.27f8f607.js.map",
-    "static/js/2.a2796939.chunk.js": "/MarcoPereira27/nft-clicker-game/static/js/2.a2796939.chunk.js",
-    "static/js/2.a2796939.chunk.js.map": "/MarcoPereira27/nft-clicker-game/static/js/2.a2796939.chunk.js.map",
-    "index.html": "/MarcoPereira27/nft-clicker-game/index.html",
-    "static/css/main.e8360e63.chunk.css.map": "/MarcoPereira27/nft-clicker-game/static/css/main.e8360e63.chunk.css.map",
-    "static/js/2.a2796939.chunk.js.LICENSE.txt": "/MarcoPereira27/nft-clicker-game/static/js/2.a2796939.chunk.js.LICENSE.txt"
+    "main.css": "/nft-clicker-game/static/css/main.e8360e63.chunk.css",
+    "main.js": "/nft-clicker-game/static/js/main.cc689376.chunk.js",
+    "main.js.map": "/nft-clicker-game/static/js/main.cc689376.chunk.js.map",
+    "runtime-main.js": "/nft-clicker-game/static/js/runtime-main.eb939860.js",
+    "runtime-main.js.map": "/nft-clicker-game/static/js/runtime-main.eb939860.js.map",
+    "static/js/2.a2796939.chunk.js": "/nft-clicker-game/static/js/2.a2796939.chunk.js",
+    "static/js/2.a2796939.chunk.js.map": "/nft-clicker-game/static/js/2.a2796939.chunk.js.map",
+    "index.html": "/nft-clicker-game/index.html",
+    "static/css/main.e8360e63.chunk.css.map": "/nft-clicker-game/static/css/main.e8360e63.chunk.css.map",
+    "static/js/2.a2796939.chunk.js.LICENSE.txt": "/nft-clicker-game/static/js/2.a2796939.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.27f8f607.js",
+    "static/js/runtime-main.eb939860.js",
     "static/js/2.a2796939.chunk.js",
     "static/css/main.e8360e63.chunk.css",
     "static/js/main.cc689376.chunk.js"
