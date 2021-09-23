@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
 import './App.css';
+import Clicker from './components/Clicker';
+import Items from './components/Items';
+import Score from './components/Score';
+import Store from './components/Store';
+import Wrapper from './components/Wrapper';
+import ClickerContextProvider from './context/ContextProvider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ClickerContextProvider>
+      <Wrapper>
+        <Clicker />
+        <Items />
+        <Store />
+        <Score />
+        <div className='nft-items'></div>
+        <div className='level-items'></div>
+      </Wrapper>
+    </ClickerContextProvider>
   );
 }
 

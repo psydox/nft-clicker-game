@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  padding: 0.5rem;
+  display: grid;
+  grid-template-areas: 
+      "a b b c c"
+      "a b b c c"
+      "a b b e e"
+      "d f f e e";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container > div {
+  border: 1px solid #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.clicker-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  grid-area: a;
+  margin: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.clicker-section .reward-per-click {
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.clicker-section button {
+  width: 10rem;
+  height: 10rem;
+  font-size: 2rem;
+}
+
+.btc-canvas {
+  max-width: 20rem !important;
+  max-height: 20rem !important;
+}
+
+.items {
+  grid-area: b;
+  margin: 0.5rem;
+}
+
+.item {
+  display: flex;
+  margin: 0.5rem;
+  height: 5rem;
+  border: 1px solid #000;
+  justify-content: space-between;
+  padding: 0.4rem;
+}
+
+.item-details {
+  display: flex;
+}
+
+.item-image {
+  height: 100%;
+  width: 4.2rem;
+  border: 1px solid #000;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.5rem;
+}
+
+.item-info p {
+  font-size: 0.75rem;
+}
+
+.item-buy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.item-buy button {
+  height: 2rem;
+}
+
+.store {
+  grid-area: c;
+  margin: 0.5rem;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  grid-area: d;
+  margin: 0.5rem;
+}
+
+.nft-items {
+  grid-area: e;
+  margin: 0.5rem;
+}
+
+.level-items {
+  grid-area: f;
+  margin: 0.5rem;
+}
+
+.bought-item-container{
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.3rem;
+  padding: 0.5rem;
 }
