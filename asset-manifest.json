@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/nft-clicker-game/static/css/main.e8360e63.chunk.css",
-    "main.js": "/nft-clicker-game/static/js/main.292bb8ba.chunk.js",
-    "main.js.map": "/nft-clicker-game/static/js/main.292bb8ba.chunk.js.map",
+    "main.js": "/nft-clicker-game/static/js/main.b12e7cf7.chunk.js",
+    "main.js.map": "/nft-clicker-game/static/js/main.b12e7cf7.chunk.js.map",
     "runtime-main.js": "/nft-clicker-game/static/js/runtime-main.eb939860.js",
     "runtime-main.js.map": "/nft-clicker-game/static/js/runtime-main.eb939860.js.map",
     "static/js/2.a2796939.chunk.js": "/nft-clicker-game/static/js/2.a2796939.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.eb939860.js",
     "static/js/2.a2796939.chunk.js",
     "static/css/main.e8360e63.chunk.css",
-    "static/js/main.292bb8ba.chunk.js"
+    "static/js/main.b12e7cf7.chunk.js"
   ]
 }
