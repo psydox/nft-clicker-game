@@ -1,5 +1,8 @@
 import React, {useContext} from 'react';
 import ClickerContext from '../context/Context';
+import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
+import { OrbitControls } from '@react-three/drei';
 
 export default function Item(props) {
   const { name, inc_per_click, inc_per_sec, price, id, img } = props;
@@ -9,7 +12,16 @@ export default function Item(props) {
   return (
     <div className='item'>
       <div className='item-details'>
-        <div className='item-image'></div>
+        <div className='item-image'>
+          <Canvas>
+          <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
+          <ambientLight intensity={0.6} />
+          <directionalLight color='red' position={[0, 0, 4]} />
+            <Suspense fallback={null}>
+              {props.children}
+            </Suspense>
+          </Canvas>
+        </div>
         <div className='item-info'>
             <h4>{name}</h4>
             <p>+{inc_per_sec} BTC per second</p>

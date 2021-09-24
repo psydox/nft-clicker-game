@@ -1,9 +1,20 @@
+:root {
+  --background-color: #020113;
+  --secondary-color: #040227;
+  --border-color: #fff;
+  --font-color: #000;
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  background-color: var(--background-color);
+  color: #fff;
+}
 
 .app-container {
   width: 100vw;
@@ -18,10 +29,13 @@
 }
 
 .app-container > div {
-  border: 1px solid #000;
+  border: 1px solid var(--border-color);
 }
 
 .clicker-section {
+  background-color: var(--secondary-color);
+  opacity: 0.95;
+  backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +60,7 @@
 }
 
 .items {
+  background-color: var(--secondary-color);
   grid-area: b;
   margin: 0.5rem;
 }
@@ -54,7 +69,7 @@
   display: flex;
   margin: 0.5rem;
   height: 5rem;
-  border: 1px solid #000;
+  border: 1px solid var(--border-color);
   justify-content: space-between;
   padding: 0.4rem;
 }
@@ -66,7 +81,7 @@
 .item-image {
   height: 100%;
   width: 4.2rem;
-  border: 1px solid #000;
+  border: 1px solid var(--border-color);
 }
 
 .item-info {
@@ -92,11 +107,13 @@
 }
 
 .store {
+  background-color: var(--secondary-color);
   grid-area: c;
   margin: 0.5rem;
 }
 
 .score {
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,17 +124,19 @@
 }
 
 .nft-items {
+  background-color: var(--secondary-color);
   grid-area: e;
   margin: 0.5rem;
 }
 
 .level-items {
+  background-color: var(--secondary-color);
   grid-area: f;
   margin: 0.5rem;
 }
 
 .bought-item-container{
-  border: 1px solid #000;
+  border: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   margin: 0.3rem;

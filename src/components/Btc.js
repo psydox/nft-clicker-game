@@ -9,7 +9,7 @@ import { useFrame } from '@react-three/fiber'
 export default function Model({ ...props }) {
   const group = useRef()
   const btcRef = React.useRef()
-  const { nodes, materials } = useGLTF('/btc.gltf')
+  const { nodes, materials } = useGLTF('/nft-clicker-game/btc.gltf')
 
   useFrame(({clock}) => {
     btcRef.current.rotation.z = clock.getElapsedTime();
