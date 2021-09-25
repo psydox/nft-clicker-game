@@ -3,6 +3,7 @@
   --secondary-color: #040227;
   --border-color: #fff;
   --font-color: #000;
+  --news-section-height: 2rem;
 }
 
 *{
@@ -18,7 +19,7 @@ body {
 
 .app-container {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - var(--news-section-height));
   padding: 0.5rem;
   display: grid;
   grid-template-areas: 
@@ -142,3 +143,14 @@ body {
   margin: 0.3rem;
   padding: 0.5rem;
 }
+
+.news {
+  height: var(--news-section-height);
+  border-top: 1px solid var(--border-color);
+  width: 100vw;
+  white-space: nowrap;
+  overflow: hidden;
+  /* line-height: 20px; */
+  font-size: 1.2rem;
+}
+
