@@ -6,10 +6,15 @@
   --news-section-height: 2rem;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
 }
 
 body {
@@ -18,15 +23,12 @@ body {
 }
 
 .app-container {
-  width: 100vw;
   height: calc(100vh - var(--news-section-height));
   padding: 0.5rem;
   display: grid;
-  grid-template-areas: 
-      "a b b c c"
-      "a b b c c"
-      "a b b e e"
-      "d f f e e";
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
 }
 
 .app-container > div {
@@ -36,13 +38,13 @@ body {
 .clicker-section {
   background-color: var(--secondary-color);
   opacity: 0.95;
+  grid-row: 1 / span 3;
   backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  grid-area: a;
-  margin: 0.5rem;
+  width: 100%;
 }
 
 .clicker-section .reward-per-click {
@@ -62,26 +64,25 @@ body {
 
 .items {
   background-color: var(--secondary-color);
-  grid-area: b;
-  margin: 0.5rem;
+  width: 100%;
+  grid-row: 1 / span 3;
+  grid-column: 2 / span 2;
 }
 
 .item {
   display: flex;
-  margin: 0.5rem;
-  height: 5rem;
+  flex-direction: column;
+  width: 100%;
+  height: 13rem;
+  max-width: 11.5vw;
+  margin: 0.2rem;
   border: 1px solid var(--border-color);
-  justify-content: space-between;
   padding: 0.4rem;
-}
-
-.item-details {
-  display: flex;
+  font-size: 0.8rem;
 }
 
 .item-image {
-  height: 100%;
-  width: 4.2rem;
+  height: 50%;
   border: 1px solid var(--border-color);
 }
 
@@ -93,7 +94,7 @@ body {
 }
 
 .item-info p {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
 }
 
 .item-buy {
@@ -101,6 +102,7 @@ body {
   flex-direction: column;
   justify-content: center;
   font-size: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 .item-buy button {
@@ -109,34 +111,43 @@ body {
 
 .store {
   background-color: var(--secondary-color);
-  grid-area: c;
-  margin: 0.5rem;
+  display: grid;
+  justify-content: center;
+  grid-row: 1 / span 4;
+  grid-column: 4 / span 2;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: scroll;
+}
+
+.store::-webkit-scrollbar {
+  display: none;
 }
 
 .score {
   background-color: var(--secondary-color);
   display: flex;
+  grid-column: 1 / span 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
-  grid-area: d;
-  margin: 0.5rem;
+  width: 100%;
 }
 
 .nft-items {
   background-color: var(--secondary-color);
-  grid-area: e;
-  margin: 0.5rem;
+  grid-row: 3 / span 2;
+  grid-column: 4 / span 2;
+  width: 100%;
 }
 
 .level-items {
   background-color: var(--secondary-color);
-  grid-area: f;
-  margin: 0.5rem;
+  grid-column: 2 / span 2;
+  width: 100%;
 }
 
-.bought-item-container{
+.bought-item-container {
   border: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
@@ -154,3 +165,6 @@ body {
   font-size: 1.2rem;
 }
 
+.item-canvas{
+  max-width: 18rem;
+}

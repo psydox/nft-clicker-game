@@ -16,7 +16,6 @@ function App() {
         <Items />
         <Store />
         <Score />
-        <div className='nft-items'></div>
         <div className='level-items'></div>
       </Wrapper>
       <News />
