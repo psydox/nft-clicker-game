@@ -27,7 +27,7 @@ body {
   padding: 0.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 0.5rem;
 }
 
@@ -38,7 +38,7 @@ body {
 .clicker-section {
   background-color: var(--secondary-color);
   opacity: 0.95;
-  grid-row: 1 / span 3;
+  grid-row: 1 / span 10;
   backdrop-filter: blur(5px);
   display: flex;
   flex-direction: column;
@@ -65,7 +65,7 @@ body {
 .items {
   background-color: var(--secondary-color);
   width: 100%;
-  grid-row: 1 / span 3;
+  grid-row: 2 / span 11;
   grid-column: 2 / span 2;
 }
 
@@ -113,7 +113,7 @@ body {
   background-color: var(--secondary-color);
   display: grid;
   justify-content: center;
-  grid-row: 1 / span 4;
+  grid-row: 1 / span 12;
   grid-column: 4 / span 2;
   grid-template-columns: 1fr 1fr 1fr;
   overflow: scroll;
@@ -127,6 +127,7 @@ body {
   background-color: var(--secondary-color);
   display: flex;
   grid-column: 1 / span 1;
+  grid-row: 11 / span 2;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -143,6 +144,7 @@ body {
 
 .level-items {
   background-color: var(--secondary-color);
+  position: relative;
   grid-column: 2 / span 2;
   width: 100%;
 }
@@ -161,10 +163,15 @@ body {
   width: 100vw;
   white-space: nowrap;
   overflow: hidden;
-  /* line-height: 20px; */
   font-size: 1.2rem;
 }
 
-.item-canvas{
+.item-canvas {
   max-width: 18rem;
+}
+
+.energy-canvas {
+  position: absolute;
+  height: 100%;
+  width: 100%;
 }

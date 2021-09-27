@@ -1,12 +1,12 @@
 import React, { useContext, Suspense } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas } from '@react-three/fiber';
 import {OrbitControls} from '@react-three/drei';
 import Model from './Btc';
 import ClickerContext from '../context/Context';
 import '../App.css';
 
 export default function Clicker() {
-  const { incrementScore, state } = useContext(ClickerContext);
+  const { incrementScore, decreaseEnergy, state } = useContext(ClickerContext);
   const { reward_per_click, reward_per_second } = state;
 
   return (
@@ -25,6 +25,7 @@ export default function Clicker() {
           <Model
             onClick={() => {
               incrementScore(reward_per_click);
+              decreaseEnergy();
             }}
           />
         </Suspense>

@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 import Clicker from './components/Clicker';
+import EnergyBar from './components/EnergyBar';
 import Items from './components/Items';
 import News from './components/News';
 import Score from './components/Score';
@@ -13,10 +14,10 @@ function App() {
     <ClickerContextProvider>
       <Wrapper>
         <Clicker />
+        <EnergyBar />
         <Items />
         <Store />
         <Score />
-        <div className='level-items'></div>
       </Wrapper>
       <News />
     </ClickerContextProvider>

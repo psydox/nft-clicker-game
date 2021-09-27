@@ -10,6 +10,7 @@ class ClickerContextProvider extends Component {
     reward_per_click: 0.000001,
     reward_per_second: 0.000000,
     fiat_score: INITIAL_BTC * BITCOIN_PRICE,
+    energy: 1,
     items: []
   };
 
@@ -73,6 +74,18 @@ class ClickerContextProvider extends Component {
     console.log(this.state)
   }
 
+  decreaseEnergy = () => {
+    let currentEnergy = this.state.energy;
+
+    if(currentEnergy <= 0) return;
+
+    currentEnergy -= 0.01;
+
+    this.setState({
+      energy: currentEnergy
+    })
+  }
+
   render() {
     return (
       <ClickerContext.Provider
@@ -81,6 +94,7 @@ class ClickerContextProvider extends Component {
           incrementScore: this.incrementScore,
           improveRewardPerClick: this.improveRewardPerClick,
           improveRewardPerSecond: this.improveRewardPerSecond,
+          decreaseEnergy: this.decreaseEnergy,
           buyItem: this.buyItem
         }}
       >
